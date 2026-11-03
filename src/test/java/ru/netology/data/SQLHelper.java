@@ -3,6 +3,7 @@ package ru.netology.data;
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -42,6 +43,14 @@ public class SQLHelper {
     public static void cleanAuthCodes() {
         try (var conn = getConn()) {
             QUERY_RUNNER.execute(conn, "DELETE FROM auth_codes");
+        }
+    }
+
+    @SneakyThrows
+    public static String getUserStatus(String login) {
+        var sql = "SELECT status FROM users WHERE login = ?";
+        try (var conn = getConn()) {
+            return QUERY_RUNNER.query(conn, sql, new ScalarHandler<>(), login);
         }
     }
 }

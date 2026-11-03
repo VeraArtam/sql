@@ -1,6 +1,5 @@
 package ru.netology.test;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import ru.netology.data.DataHelper;
 import ru.netology.data.SQLHelper;
 import ru.netology.page.LoginPage;
-import ru.netology.page.VerificationPage;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.netology.data.SQLHelper.cleanAuthCodes;
 import static ru.netology.data.SQLHelper.cleanDatabase;
 
@@ -46,14 +45,17 @@ public class LoginTest {
         var authInfo = DataHelper.getAuthInfoWithTestData();
 
         for (int i = 0; i < 3; i++) {
-            var wrongInfo = new DataHelper.AuthInfo(authInfo.getLogin(), "wrong_password");
+            var wrongInfo = new DataHelper.AuthInfo(authInfo.getLogin(), DataHelper.generateWrongPassword());
             loginPage.login(wrongInfo);
-            Selenide.sleep(1000);
+            loginPage.waitForErrorNotificationText();
         }
 
         loginPage.login(authInfo);
 
         loginPage.loginFieldShouldBeVisible();
+
+        String actualStatus = SQLHelper.getUserStatus(authInfo.getLogin());
+        assertEquals("blocked", actualStatus, "Пользователь должен быть заблокирован после 3 неверных попыток!");
     }
 
     @Test
@@ -63,6 +65,6 @@ public class LoginTest {
 
         loginPage.login(randomUser);
 
-        loginPage.loginFieldShouldBeVisible();
+        loginPage.verifyErrorNotification("Неверно указан логин или пароль");
     }
 }

@@ -1,10 +1,10 @@
 package ru.netology.page;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
 import ru.netology.data.DataHelper;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
@@ -14,7 +14,7 @@ public class LoginPage {
     private final SelenideElement errorNotification = $("[data-test-id='error-notification'] .notification__content");
 
     public void verifyErrorNotification(String expectedText) {
-        errorNotification.shouldHave(exactText(expectedText)).shouldBe(visible);
+        errorNotification.shouldHave(text(expectedText)).shouldBe(visible);
     }
 
     public VerificationPage validLogin(DataHelper.AuthInfo info) {
@@ -23,12 +23,20 @@ public class LoginPage {
     }
 
     public void login(DataHelper.AuthInfo info) {
+        loginField.click();
+        loginField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         loginField.setValue(info.getLogin());
+        passwordField.click();
+        passwordField.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         passwordField.setValue(info.getPassword());
         loginButton.click();
     }
 
     public void loginFieldShouldBeVisible() {
         loginField.shouldBe(visible);
+    }
+
+    public void waitForErrorNotificationText() {
+        errorNotification.shouldNotBe(com.codeborne.selenide.Condition.empty);
     }
 }

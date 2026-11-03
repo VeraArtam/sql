@@ -34,6 +34,10 @@ public class DataHelper {
         return new VerificationCode(FAKER.numerify("######"));
     }
 
+    public static String generateWrongPassword() {
+        return FAKER.internet().password();
+    }
+
     @Value
     public static class AuthInfo {
         String login;

@@ -9,6 +9,6 @@ public class DashboardPage {
     private final SelenideElement heading = $("[data-test-id=dashboard]");
 
     public DashboardPage() {
-        heading.shouldBe(visible);
+        heading.shouldBe(visible).shouldHave(text("Личный кабинет"));
     }
 }
