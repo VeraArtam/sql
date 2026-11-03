@@ -47,7 +47,7 @@ public class LoginTest {
         for (int i = 0; i < 3; i++) {
             var wrongInfo = new DataHelper.AuthInfo(authInfo.getLogin(), DataHelper.generateWrongPassword());
             loginPage.login(wrongInfo);
-            loginPage.waitForErrorNotificationText();
+            loginPage.verifyErrorNotification("Неверно указан логин или пароль");
         }
 
         loginPage.login(authInfo);

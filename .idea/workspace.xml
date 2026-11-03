@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8b2dc7-f421-4754-8a9b-cdb6457f55ca" name="Changes" comment="" />
+    <list default="true" id="4a8b2dc7-f421-4754-8a9b-cdb6457f55ca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/LoginTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,46 +50,46 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LY0ZC3gBzrNwt4Gn36m53Q1FL4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.LoginTest.executor": "Run",
-    "Gradle.LoginTest.shouldBlockAfterThreeInvalidPasswords.executor": "Run",
-    "Gradle.LoginTest.shouldLoginSuccessfully.executor": "Run",
-    "Gradle.LoginTest.shouldNotLoginWithRandomUser.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/IdeaProjects/deadlineTests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTest.shouldBlockAfterThreeInvalidPasswords.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTest.shouldLoginSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTest.shouldNotLoginWithRandomUser.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/deadlineTests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\USER\IdeaProjects\deadlineTests" />
       <recent name="C:\Users\USER\IdeaProjects\deadlineTests\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTest.shouldNotLoginWithRandomUser">
+  <component name="RunManager" selected="Gradle.LoginTest">
     <configuration name="LoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -195,10 +200,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTest.shouldNotLoginWithRandomUser" />
-        <item itemvalue="Gradle.LoginTest.shouldBlockAfterThreeInvalidPasswords" />
-        <item itemvalue="Gradle.LoginTest.shouldLoginSuccessfully" />
         <item itemvalue="Gradle.LoginTest" />
+        <item itemvalue="Gradle.LoginTest.shouldBlockAfterThreeInvalidPasswords" />
+        <item itemvalue="Gradle.LoginTest.shouldNotLoginWithRandomUser" />
+        <item itemvalue="Gradle.LoginTest.shouldLoginSuccessfully" />
       </list>
     </recent_temporary>
   </component>

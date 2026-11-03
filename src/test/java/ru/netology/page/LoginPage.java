@@ -35,8 +35,4 @@ public class LoginPage {
     public void loginFieldShouldBeVisible() {
         loginField.shouldBe(visible);
     }
-
-    public void waitForErrorNotificationText() {
-        errorNotification.shouldNotBe(com.codeborne.selenide.Condition.empty);
-    }
 }
